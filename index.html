@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journal App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>My Journal</h1>
+    <input id="searchInput" type="search" placeholder="Search your journals...">
+    <form id="journalForm">
+        <label for="JournalTitle">Journal Title</label>
+        <input id="journalTitle" type="text" placeholder="Enter your journal title" required>
+        <label for="JournalContent">Journal Content</label>
+        <textarea id="journalContent" placeholder="Write your journal here" required></textarea>
+        <button id="saveJournalBtn" type="submit">Save Journal</button>
+        <button id="cancelEditBtn" type="button">Cancel Editing</button>
+
+        <select id="journalCategory">
+            <label for="journalCategory">Journal Category</label>
+            <option value="Personal">Personal</option>
+            <option value="Study">Study</option>
+            <option value="Goals">Goals</option>
+            <option value="Work">Work</option>
+        </select>
+    </form>
+    <select id="sortJournals">
+        <option value="default">Default Order</option>
+        <option value="asc">Title (A-Z)</option>
+        <option value="desc">Title (Z-A)</option>
+        <option value="newest">Newest</option>
+        <option value="recentlyUpdated">Recently Updated</option>
+    </select>
+    <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+        <option value="Goals">Goals</option>
+        <option value="Work">Work</option>
+    </select>
+    <select id="filterFavorites">
+        <option value="allJournals">All Journals</option>
+        <option value="favorites">Favorites</option>
+    </select>
+
+    <section id="journalStats">
+        <div>
+            <h3>Total Journals</h3>
+            <p id="totalJournals">0</p>
+        </div>
+
+        <div>
+            <h3>Favorite Journals</h3>
+            <p id="totalFavorites">0</p>
+        </div>
+
+        <div>
+            <h3>Total Categories</h3>
+            <p id="totalCategories">0</p>
+        </div>
+    </section>
+    <ol id="journalEntries"></ol>
+    <script src="app.js"></script>
+</body>
+
+</html>
